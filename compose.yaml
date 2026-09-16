@@ -1,0 +1,7 @@
+services:
+  ops-status:
+    build: .
+    image: ops-status:dev
+    ports:
+      - "8000:8000"
+
