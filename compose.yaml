@@ -4,4 +4,8 @@ services:
     image: ops-status:dev
     ports:
       - "8000:8000"
-
+    environment:
+      OPS_STATUS_TARGET_NAME: ${OPS_STATUS_TARGET_NAME}
+      OPS_STATUS_TARGET_URL: ${OPS_STATUS_TARGET_URL}
+    extra_hosts:
+      - "${OPS_STATUS_TARGET_HOSTNAME}:${OPS_STATUS_TARGET_IP}"
